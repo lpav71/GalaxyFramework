@@ -1,0 +1,42 @@
+{
+  "name": "l_pavel/galaxy.local",
+  "description": "mvc framework",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "pavel",
+      "email": "lpav71@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-gd": "*",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "ext-curl": "*",
+    "ext-mysqli": "*",
+    "ext-soap": "*",
+    "ext-simplexml": "*",
+    "ext-iconv": "*",
+    "pecee/simple-router": "5.3.0.2",
+    "twig/twig": "^3.0",
+    "illuminate/events": "^10.25",
+    "illuminate/database": "^10.25"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^6.2"
+  },
+  "autoload": {
+    "classmap": [
+      "framework/"
+    ],
+    "files" :
+    [
+      "framework/view.php",
+      "app/helpers.php"
+    ],
+    "psr-4": {
+      "Galaxy\\": "app/"
+    }
+  }
+}
