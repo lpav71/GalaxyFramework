@@ -6,7 +6,7 @@ use Illuminate\Database\Capsule\Manager as DB;
 
 class Eloquent
 {
-    public static function EloquentConnection()
+    public static function EloquentConnection(): void
     {
         $config = Configurator::ReadConfiguration();
         $capsule = new DB;
@@ -27,5 +27,6 @@ class Eloquent
             'prefix' => '',
         ]);
         $capsule->setAsGlobal();
+        $capsule->bootEloquent();
     }
 }

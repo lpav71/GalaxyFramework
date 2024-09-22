@@ -15,6 +15,7 @@ class DefaultController
     public function home() : void
     {
         $e = 'Default - Home';
+//        dd($e);
         view("default/index.twig", compact('e'));
     }
 
@@ -22,5 +23,10 @@ class DefaultController
     {
         $e = DB::table('api_logs')->get();
         dd($e);
+    }
+
+    public function notFound()
+    {
+        echo "Страница не найдена";
     }
 }
